@@ -18,11 +18,26 @@
  *  Version: 0.4.2
  *
  * ------------------------------------------------------- */
-@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,500,600&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Nunito:600,700,800&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:500&display=swap);
+@font-face {
+  font-family: 'Nunito';
+  src: url('fonts/Nunito-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('fonts/Inconsolata-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url('fonts/RobotoMono-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
 :root {
   /* Fonts */
   --text-font-family: Inconsolata;
