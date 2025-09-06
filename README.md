@@ -18,9 +18,9 @@ This course is mostly based on [Louis Sirugue Intro to Programming in R course](
 ## Lectures:
 You can find the pdf version of the slides in the `slides` folder. 
 1. Data manipulation (Sep 8)
-    - [📄 Open slides](https://raw.githubusercontent.com/mariamontoyaa/2025-intro-to-r-public/main/slides/01_data-manipulation-noanswers.html)
+    - [📄 Open slides](https://mariamontoyaa.github.io/2025-intro-to-r-public/slides/01_data-manipulation-noanswers.html)
 3. Data visualization (Sep 9)
-    - [📄 Open Slides](https://raw.githubusercontent.com/mariamontoyaa/2025-intro-to-r-public/main/slides/02_data-visualization.html)
+    - [📄 Open Slides](https://mariamontoyaa.github.io/2025-intro-to-r-public/slides/02_data-visualization.html)
 4. R Markdown, LaTeX and other tools for reproducible research (Sep 11)
 5. Econometrics in R (Sep 12)
    
