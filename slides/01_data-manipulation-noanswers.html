@@ -8,7 +8,7 @@
     <link href="01_data-manipulation-noanswers_files/remark-css-0.0.1/ninjutsu.css" rel="stylesheet" />
     <link href="01_data-manipulation-noanswers_files/countdown-0.4.0/countdown.css" rel="stylesheet" />
     <script src="01_data-manipulation-noanswers_files/countdown-0.4.0/countdown.js"></script>
-    <script src="01_data-manipulation-noanswers_files/htmlwidgets-1.6.1/htmlwidgets.js"></script>
+    <script src="01_data-manipulation-noanswers_files/htmlwidgets-1.6.2/htmlwidgets.js"></script>
     <script src="01_data-manipulation-noanswers_files/viz-1.8.2/viz.js"></script>
     <link href="01_data-manipulation-noanswers_files/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
     <script src="01_data-manipulation-noanswers_files/grViz-binding-1.0.10/grViz.js"></script>
@@ -174,7 +174,6 @@ Learning R programming to carry out your empirical homeworks and research projec
   - Econometrics **(Lecture 4)**
 3. Report results &amp; publish code  **(Lecture 3)**
 
-One-break for you to follow the first lecture/tutorial of Econometrics I
 
 --
 
@@ -212,6 +211,34 @@ One-break for you to follow the first lecture/tutorial of Econometrics I
   - LOOKING FOR HELP
 ]
  ]
+---
+
+### 💬 A Note on AI Tools
+
+You’ll soon see that tools like ChatGPT  
+can be **incredibly helpful** for learning R.
+
+But **today**, we’re focusing on **foundations** —  
+how to read code, write it, and think through problems.
+
+
+ ⏳**For Today**
+
+&gt; **Please don’t use AI during this session.**  
+&gt; Let your brain do the debugging !
+
+Why?
+
+-  Struggling helps you learn  
+-  You’re building foundations that will make AI more useful later  
+- ️ We’ll talk about AI **at the end of class**
+
+🧭**What to Do Instead**
+- Use the documentation in R
+- Read error messages carefully  
+- Ask a neighbor or raise your hand 
+
+
 ---
 
  
@@ -496,6 +523,103 @@ mean(grades)
 ## [1] 13.6
 ```
 ---
+## PACKAGES
+
+.nunito[There are **tons** of user-created functions, they come bundled in ***packages***]
+
+- Some functions are built into R itself — this is called the **{base}** package.
+- Most extra functions live in packages hosted on the **Comprehensive R Archive Network (CRAN)**.
+
+--  
+ 
+ 
+.nunito[💡 A package is like a lightbulb]
+
+You need to:
+- **Install** it once: `install.packages("package_name")`
+- **Turn it on** every time you need it: `library(package_name)`
+
+--
+
+**You can also call a function without loading the package**:  
+ `package_name::function` &lt;br&gt; **Advantage**: clear for others which package is it coming from, avoids conflicts when packages have functions with the same name. &lt;br&gt; **Disadvantage:** Not practical for functions you use often.
+  
+---
+
+class:middle inverse
+.center[
+.nunito[
+# NOW WE ARE GOING TO WORK WITH DATA
+
+BUT FIRST,
+LET'S GET OUR FILES ORGANIZED
+ 
+]]
+---
+&lt;br&gt;
+
+.greenhead[**FILE PATHS, FOLDERS &amp; PROJECTS**]
+
+
+**🗺️ What's a file path?** 
+
+It's like directions to a file on your computer. R needs to know where to find your data. 
+- **Absolute** paths:   
+`"C:/Users/Maria/Documents/myproject/data/myfile.csv"` Windows
+`"/Users/maria/Documents/myproject/data/myfile.csv"` Mac 
+- **Relative paths:** `"data/myfile.csv"` 
+
+**📁Recommended folder structure** 
+
+```r
+myproject/               ← 📁 Your project folder
+├── data/                ← data files (CSV, DTA, etc.)
+├── scripts/             ← R scripts 
+├── output/              ← tables, figures, model results
+├── myproject.Rproj      ← your R Project file
+```
+
+
+---
+&lt;br&gt;
+
+.greenhead[**FILE PATHS, FOLDERS &amp; PROJECTS**]
+
+**🗺️ What's a file path?** 
+- **Absolute** paths:   
+`"C:/Users/Maria/Documents/myproject/data/myfile.csv"` Windows
+`"/Users/maria/Documents/myproject/data/myfile.csv"` Mac 
+- **Relative paths:** `"data/myfile.csv"` 
+
+**📁Recommended folder structure**
+&lt;img src="inputs/01_myproject_screenshot.png" width="1171" /&gt;
+
+
+---
+
+&lt;br&gt;
+
+.greenhead[**FILE PATHS, FOLDERS &amp; PROJECTS**]
+
+**📦Create an R Project in RStudio** 
+1. **File -&gt; New Project** 
+2. Select **New Directory** or **Existing Directory**
+3. Name the project (e.g. `intro_to_R`)
+4. Open the `.Rproj` file every time you work 
+
+📍**Using `here()` for Clean File Paths** 
+
+```r
+install.packages("here")  # Install the package
+library(here)              # Load the package
+here("data", "myfile.csv") # Relative path 
+"C:/Users/Maria/Documents/myproject/data/myfile.csv" # Absolute path
+```
+
+
+
+---
+
 &lt;br&gt;
 
 .greenhead[**IMPORTING AND INSPECTING DATA**]
@@ -503,6 +627,7 @@ mean(grades)
 📥 **Download the data folder from the course website** 
 - We are going to analyze the 250 top rated French Movies in IMDB
 - Open the CSV file in your computer and inspect it: columns are variables and rows are observations
+
 
 ---
 &lt;br&gt;
@@ -522,7 +647,7 @@ mean(grades)
 
 
 ```r
-imdb &lt;- read.csv("C:/User/Documents/01_imdb-top250-french.csv")
+imdb &lt;- read.csv(here("data", "01_imdb-top250-french.csv"))
 
 # Exploring the data 
 head(imdb, 4)   # Show first four rows
@@ -585,7 +710,7 @@ We need to make sure we are using the right *translation*!
 
 
 ```r
-imdb &lt;- read.csv("C:/User/Documents/01_imdb-top250-french.csv",
+imdb &lt;- read.csv(here("data", "01_imdb-top250-french.csv"),
 *                encoding = "UTF-8") #UTF-8 should work for latin languages
 ```
 
@@ -636,7 +761,7 @@ Median(v1)
 
 ]
 
-<div class="countdown" id="timer_25efcaba" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_85899138" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1410,7 +1535,7 @@ class: inverse
 - There are 6 movies that last 104 minutes, what are they called?
 
 --
-<div class="countdown" id="timer_af7fe841" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_f91424a5" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -2052,7 +2177,7 @@ class: inverse
 --
 
 **When overwhelmed, break down tasks into smaller steps!! Step away from the screen if you need to.**  
-<div class="countdown" id="timer_8d8b98a8" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_72a26e51" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">08</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -2093,8 +2218,8 @@ class: inverse
 class:middle
 
 .center[
-<div id="htmlwidget-821e7913f518c956e71b" style="width:600px;height:504px;" class="grViz html-widget "></div>
-<script type="application/json" data-for="htmlwidget-821e7913f518c956e71b">{"x":{"diagram":"digraph {\n  graph [layout = dot, rankdir = TB          ]\n  \n  node [shape = rectangle,\n        fontname = Nunito,\n        fontsize = 14]        \n  rec1 [label = \"🕵🏾 DATA COLLECTION\"]\n  rec2 [label = \"🧹 DATA CLEANING / TIDYING\",\n        color = \"#D84727\"]\n  rec3 [label = \"📊DATA ANALYSIS\"]\n  rec4 [label = \"📑REPORT RESULTS\"]\n  \n  # edge definitions with the node IDs\n  rec1 -> rec2 -> rec3 -> rec4\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-cfbf17a8f9ba4fbbd3e4" style="width:600px;height:504px;" class="grViz html-widget "></div>
+<script type="application/json" data-for="htmlwidget-cfbf17a8f9ba4fbbd3e4">{"x":{"diagram":"digraph {\n  graph [layout = dot, rankdir = TB          ]\n  \n  node [shape = rectangle,\n        fontname = Nunito,\n        fontsize = 14]        \n  rec1 [label = \"🕵🏾 DATA COLLECTION\"]\n  rec2 [label = \"🧹 DATA CLEANING / TIDYING\",\n        color = \"#D84727\"]\n  rec3 [label = \"📊DATA ANALYSIS\"]\n  rec4 [label = \"📑REPORT RESULTS\"]\n  \n  # edge definitions with the node IDs\n  rec1 -> rec2 -> rec3 -> rec4\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 ]
 ---
 ### A CHECKLIST FOR CLEANING DATA
@@ -2225,13 +2350,18 @@ We've learned the tools for manipulating data. What does it mean to clean and ti
 
 --
 - Search online. Your questions have fore sure been asked before on ***stackoverflow.***
-    - Learning how to Google is a skill in itself. Think about your issue in the most abstract way.
+    - Learning how to Google/prompt is a skill in itself. 
     - If you can’t understand an error message, paste the error message on Google along with the name of your command.
     - ⭐️ Ask in the course website. I’ll do my best to support you throughout this year.
 - 💎 **Check for typos.** 70% of the time this is the issue. 
+
+
+
 ---
-### HOMEWORK 
-🔔 .nunito[**Due on Wednesday before 9am **]. &lt;br&gt; Submit using this [link](https://classroom.github.com/a/kGB7qVRf) and following the instructions [here](). 
+
+
+### HOMEWORK (1/2) 
+🔔 .nunito[**Due tomorrow before 11:15 **]. &lt;br&gt; Submit using this [link](https://classroom.github.com/a/kGB7qVRf) and following the instructions [here](https://www.youtube.com/watch?v=O0XcZ-c_oF8). 
 
 ✅️ Inspect the IMDB dataset [🔍`glimpse()` `table()`] and describe 5 issues we should solve in the data cleaning/tidying process that we haven’t addressed in this lecture. Write down the name of at least one function that would help for this. Google if you need! 
 
@@ -2245,12 +2375,30 @@ We've learned the tools for manipulating data. What does it mean to clean and ti
 
 3) Create a table with the average rating by decade (start from the 50s).
  
-  .nunito[You can **work** together, but don't copy-paste code]
-  
-  .nunito[🖍️ Don't forget to comment your code, describe what you are doing️]
 
 
 ---
+
+
+### HOMEWORK (2/2) 
+🔔 .nunito[**Due tomorrow before 11:15 **]. &lt;br&gt; Submit using this [link](https://classroom.github.com/a/kGB7qVRf) and following the instructions [here](https://www.youtube.com/watch?v=O0XcZ-c_oF8). 
+
+✅  AI Reflection
+
+
+Once you’ve completed the coding part (or after at least 30 minutes of trying on your own), you may use an AI tool (like ChatGPT) to help you understand or refine your solution.
+Then, write a short reflection (in your R script) answering the following questions:
+
+1. What prompt did you give to the AI?
+2. What kind of answer did it give you? Was it helpful? Why or why not?
+3. How did you adapt or modify what the AI gave you, if at all?
+
+
+🖍️ Don't forget to comment your code, describe what you are doing
+
+
+---
+
 ### RESOURCES
 **Learning R (Manipulating data)** 
 - [YaRrr The Pirate's Guide to R](https://bookdown.org/ndphillips/YaRrr/why-is-r-so-great.html)

@@ -140,7 +140,7 @@ M1 APE @ PARIS SCHOOL OF ECONOMICS
 
 
 ```r
-imdb &lt;- read.csv("../data/01_imdb-top250-french.csv", encoding = "UTF-8")
+imdb &lt;- read.csv(here("data","01_imdb-top250-french.csv"), encoding = "UTF-8")
 glimpse(imdb)
 ```
 
@@ -150,19 +150,19 @@ glimpse(imdb)
 ```
 ## Rows: 250
 ## Columns: 13
-## $ X              &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, …
-## $ Name           &lt;chr&gt; "Shoah", "Home", "Untouchable", "Le Trou", "The Man Who Planted Trees", "Ch…
-## $ Rank           &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, …
-## $ Year           &lt;chr&gt; "-1985", "(I) (2009)", "-2011", "-1960", "-1987", "-1945", "-2001", "-2010"…
-## $ Type           &lt;chr&gt; "PG", "U", "15", "A", "", "A", "15", "15", "A", "U", "U", "A", "AA", "15", …
-## $ Duration       &lt;chr&gt; "566 min", "118 min", "112 min", "131 min", "30 min", "189 min", "122 min",…
-## $ Genre          &lt;chr&gt; "Documentary, History, War", "Documentary", "Biography, Comedy, Drama", "Cr…
-## $ Rating         &lt;dbl&gt; 8.7, 8.5, 8.5, 8.5, 8.5, 8.3, 8.3, 8.3, 8.2, 8.2, 8.2, 8.2, 8.1, 8.1, 8.1, …
-## $ MetaScore      &lt;int&gt; 99, 47, 57, NA, NA, 96, 69, 80, NA, NA, NA, 86, 99, NA, NA, 100, 95, 85, 96…
-## $ Desc           &lt;chr&gt; "Claude Lanzmann's epic documentary recounts the story of the Holocaust thr…
-## $ Director_Stars &lt;chr&gt; "Director:\nClaude Lanzmann\n                 | \n    Stars:\nSimon Srebnik…
-## $ Votes          &lt;chr&gt; "9,984", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""…
-## $ Gross          &lt;chr&gt; "$0.02M", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "…
+## $ X              &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 4…
+## $ Name           &lt;chr&gt; "Shoah", "Home", "Untouchable", "Le Trou", "The Man Who Planted Trees", "Children of Paradise", "Amélie", "Incendies", "La Jetée", "A Man Escaped", "A Trip to the M…
+## $ Rank           &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 4…
+## $ Year           &lt;chr&gt; "-1985", "(I) (2009)", "-2011", "-1960", "-1987", "-1945", "-2001", "-2010", "-1962", "-1956", "-1902", "-1969", "-1969", "-1995", "-1959", "-1994", "-2019", "-1953…
+## $ Type           &lt;chr&gt; "PG", "U", "15", "A", "", "A", "15", "15", "A", "U", "U", "A", "AA", "15", "A", "15", "15", "A", "X", "15", "A", "A", "U", "12", "12", "12A", "X", "X", "PG", "X", "…
+## $ Duration       &lt;chr&gt; "566 min", "118 min", "112 min", "131 min", "30 min", "189 min", "122 min", "131 min", "28 min", "101 min", "13 min", "127 min", "145 min", "98 min", "99 min", "99 …
+## $ Genre          &lt;chr&gt; "Documentary, History, War", "Documentary", "Biography, Comedy, Drama", "Crime, Drama, Thriller", "Animation, Short, Drama", "Drama, Romance", "Comedy, Romance", "D…
+## $ Rating         &lt;dbl&gt; 8.7, 8.5, 8.5, 8.5, 8.5, 8.3, 8.3, 8.3, 8.2, 8.2, 8.2, 8.2, 8.1, 8.1, 8.1, 8.1, 8.1, 8.2, 8.1, 8.0, 8.2, 8.0, 8.1, 8.1, 8.0, 8.0, 8.1, 8.0, 8.0, 7.8, 7.9, 8.1, 7.9,…
+## $ MetaScore      &lt;int&gt; 99, 47, 57, NA, NA, 96, 69, 80, NA, NA, NA, 86, 99, NA, NA, 100, 95, 85, 96, 74, 98, NA, NA, 97, 92, 90, NA, NA, 88, NA, 99, NA, 92, 94, NA, NA, NA, NA, NA, NA, NA,…
+## $ Desc           &lt;chr&gt; "Claude Lanzmann's epic documentary recounts the story of the Holocaust through interviews with witnesses - perpetrators as well as survivors.", "With aerial footag…
+## $ Director_Stars &lt;chr&gt; "Director:\nClaude Lanzmann\n                 | \n    Stars:\nSimon Srebnik, \nMichael Podchlebnik, \nMotke Zaïdl, \nHanna Zaïdl", "Director:\nYann Arthus-Bertrand\…
+## $ Votes          &lt;chr&gt; "9,984", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",…
+## $ Gross          &lt;chr&gt; "$0.02M", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""…
 ```
 
 ---
@@ -171,19 +171,19 @@ glimpse(imdb)
 ```
 ## Rows: 250
 ## Columns: 13
-## $ X              &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, …
-## $ Name           &lt;chr&gt; "Shoah", "Home", "Untouchable", "Le Trou", "The Man Who Planted Trees", "Ch…
-## $ Rank           &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, …
-*## $ Year           &lt;chr&gt; "-1985", "(I) (2009)", "-2011", "-1960", "-1987", "-1945", "-2001", "-2010"…
-## $ Type           &lt;chr&gt; "PG", "U", "15", "A", "", "A", "15", "15", "A", "U", "U", "A", "AA", "15", …
-## $ Duration       &lt;chr&gt; "566 min", "118 min", "112 min", "131 min", "30 min", "189 min", "122 min",…
-## $ Genre          &lt;chr&gt; "Documentary, History, War", "Documentary", "Biography, Comedy, Drama", "Cr…
-## $ Rating         &lt;dbl&gt; 8.7, 8.5, 8.5, 8.5, 8.5, 8.3, 8.3, 8.3, 8.2, 8.2, 8.2, 8.2, 8.1, 8.1, 8.1, …
-## $ MetaScore      &lt;int&gt; 99, 47, 57, NA, NA, 96, 69, 80, NA, NA, NA, 86, 99, NA, NA, 100, 95, 85, 96…
-## $ Desc           &lt;chr&gt; "Claude Lanzmann's epic documentary recounts the story of the Holocaust thr…
-## $ Director_Stars &lt;chr&gt; "Director:\nClaude Lanzmann\n                 | \n    Stars:\nSimon Srebnik…
-## $ Votes          &lt;chr&gt; "9,984", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""…
-## $ Gross          &lt;chr&gt; "$0.02M", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "…
+## $ X              &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 4…
+## $ Name           &lt;chr&gt; "Shoah", "Home", "Untouchable", "Le Trou", "The Man Who Planted Trees", "Children of Paradise", "Amélie", "Incendies", "La Jetée", "A Man Escaped", "A Trip to the M…
+## $ Rank           &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 4…
+*## $ Year           &lt;chr&gt; "-1985", "(I) (2009)", "-2011", "-1960", "-1987", "-1945", "-2001", "-2010", "-1962", "-1956", "-1902", "-1969", "-1969", "-1995", "-1959", "-1994", "-2019", "-1953…
+## $ Type           &lt;chr&gt; "PG", "U", "15", "A", "", "A", "15", "15", "A", "U", "U", "A", "AA", "15", "A", "15", "15", "A", "X", "15", "A", "A", "U", "12", "12", "12A", "X", "X", "PG", "X", "…
+## $ Duration       &lt;chr&gt; "566 min", "118 min", "112 min", "131 min", "30 min", "189 min", "122 min", "131 min", "28 min", "101 min", "13 min", "127 min", "145 min", "98 min", "99 min", "99 …
+## $ Genre          &lt;chr&gt; "Documentary, History, War", "Documentary", "Biography, Comedy, Drama", "Crime, Drama, Thriller", "Animation, Short, Drama", "Drama, Romance", "Comedy, Romance", "D…
+## $ Rating         &lt;dbl&gt; 8.7, 8.5, 8.5, 8.5, 8.5, 8.3, 8.3, 8.3, 8.2, 8.2, 8.2, 8.2, 8.1, 8.1, 8.1, 8.1, 8.1, 8.2, 8.1, 8.0, 8.2, 8.0, 8.1, 8.1, 8.0, 8.0, 8.1, 8.0, 8.0, 7.8, 7.9, 8.1, 7.9,…
+## $ MetaScore      &lt;int&gt; 99, 47, 57, NA, NA, 96, 69, 80, NA, NA, NA, 86, 99, NA, NA, 100, 95, 85, 96, 74, 98, NA, NA, 97, 92, 90, NA, NA, 88, NA, 99, NA, 92, 94, NA, NA, NA, NA, NA, NA, NA,…
+## $ Desc           &lt;chr&gt; "Claude Lanzmann's epic documentary recounts the story of the Holocaust through interviews with witnesses - perpetrators as well as survivors.", "With aerial footag…
+## $ Director_Stars &lt;chr&gt; "Director:\nClaude Lanzmann\n                 | \n    Stars:\nSimon Srebnik, \nMichael Podchlebnik, \nMotke Zaïdl, \nHanna Zaïdl", "Director:\nYann Arthus-Bertrand\…
+## $ Votes          &lt;chr&gt; "9,984", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",…
+## $ Gross          &lt;chr&gt; "$0.02M", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""…
 ```
 --
 - The `Year`variable is not numeric and has strings that should not be there "-" "()"
@@ -199,19 +199,19 @@ glimpse(imdb)
 ```
 ## Rows: 250
 ## Columns: 13
-## $ X              &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, …
-## $ Name           &lt;chr&gt; "Shoah", "Home", "Untouchable", "Le Trou", "The Man Who Planted Trees", "Ch…
-## $ Rank           &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, …
-## $ Year           &lt;chr&gt; "-1985", "(I) (2009)", "-2011", "-1960", "-1987", "-1945", "-2001", "-2010"…
-*## $ Type           &lt;chr&gt; "PG", "U", "15", "A", "", "A", "15", "15", "A", "U", "U", "A", "AA", "15", …
-## $ Duration       &lt;chr&gt; "566 min", "118 min", "112 min", "131 min", "30 min", "189 min", "122 min",…
-## $ Genre          &lt;chr&gt; "Documentary, History, War", "Documentary", "Biography, Comedy, Drama", "Cr…
-## $ Rating         &lt;dbl&gt; 8.7, 8.5, 8.5, 8.5, 8.5, 8.3, 8.3, 8.3, 8.2, 8.2, 8.2, 8.2, 8.1, 8.1, 8.1, …
-## $ MetaScore      &lt;int&gt; 99, 47, 57, NA, NA, 96, 69, 80, NA, NA, NA, 86, 99, NA, NA, 100, 95, 85, 96…
-## $ Desc           &lt;chr&gt; "Claude Lanzmann's epic documentary recounts the story of the Holocaust thr…
-## $ Director_Stars &lt;chr&gt; "Director:\nClaude Lanzmann\n                 | \n    Stars:\nSimon Srebnik…
-## $ Votes          &lt;chr&gt; "9,984", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""…
-## $ Gross          &lt;chr&gt; "$0.02M", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "…
+## $ X              &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 4…
+## $ Name           &lt;chr&gt; "Shoah", "Home", "Untouchable", "Le Trou", "The Man Who Planted Trees", "Children of Paradise", "Amélie", "Incendies", "La Jetée", "A Man Escaped", "A Trip to the M…
+## $ Rank           &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 4…
+## $ Year           &lt;chr&gt; "-1985", "(I) (2009)", "-2011", "-1960", "-1987", "-1945", "-2001", "-2010", "-1962", "-1956", "-1902", "-1969", "-1969", "-1995", "-1959", "-1994", "-2019", "-1953…
+*## $ Type           &lt;chr&gt; "PG", "U", "15", "A", "", "A", "15", "15", "A", "U", "U", "A", "AA", "15", "A", "15", "15", "A", "X", "15", "A", "A", "U", "12", "12", "12A", "X", "X", "PG", "X", "…
+## $ Duration       &lt;chr&gt; "566 min", "118 min", "112 min", "131 min", "30 min", "189 min", "122 min", "131 min", "28 min", "101 min", "13 min", "127 min", "145 min", "98 min", "99 min", "99 …
+## $ Genre          &lt;chr&gt; "Documentary, History, War", "Documentary", "Biography, Comedy, Drama", "Crime, Drama, Thriller", "Animation, Short, Drama", "Drama, Romance", "Comedy, Romance", "D…
+## $ Rating         &lt;dbl&gt; 8.7, 8.5, 8.5, 8.5, 8.5, 8.3, 8.3, 8.3, 8.2, 8.2, 8.2, 8.2, 8.1, 8.1, 8.1, 8.1, 8.1, 8.2, 8.1, 8.0, 8.2, 8.0, 8.1, 8.1, 8.0, 8.0, 8.1, 8.0, 8.0, 7.8, 7.9, 8.1, 7.9,…
+## $ MetaScore      &lt;int&gt; 99, 47, 57, NA, NA, 96, 69, 80, NA, NA, NA, 86, 99, NA, NA, 100, 95, 85, 96, 74, 98, NA, NA, 97, 92, 90, NA, NA, 88, NA, 99, NA, 92, 94, NA, NA, NA, NA, NA, NA, NA,…
+## $ Desc           &lt;chr&gt; "Claude Lanzmann's epic documentary recounts the story of the Holocaust through interviews with witnesses - perpetrators as well as survivors.", "With aerial footag…
+## $ Director_Stars &lt;chr&gt; "Director:\nClaude Lanzmann\n                 | \n    Stars:\nSimon Srebnik, \nMichael Podchlebnik, \nMotke Zaïdl, \nHanna Zaïdl", "Director:\nYann Arthus-Bertrand\…
+## $ Votes          &lt;chr&gt; "9,984", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",…
+## $ Gross          &lt;chr&gt; "$0.02M", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""…
 ```
 --
 
@@ -228,19 +228,19 @@ glimpse(imdb)
 ```
 ## Rows: 250
 ## Columns: 13
-## $ X              &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, …
-## $ Name           &lt;chr&gt; "Shoah", "Home", "Untouchable", "Le Trou", "The Man Who Planted Trees", "Ch…
-## $ Rank           &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, …
-## $ Year           &lt;chr&gt; "-1985", "(I) (2009)", "-2011", "-1960", "-1987", "-1945", "-2001", "-2010"…
-## $ Type           &lt;chr&gt; "PG", "U", "15", "A", "", "A", "15", "15", "A", "U", "U", "A", "AA", "15", …
-## $ Duration       &lt;chr&gt; "566 min", "118 min", "112 min", "131 min", "30 min", "189 min", "122 min",…
-*## $ Genre          &lt;chr&gt; "Documentary, History, War", "Documentary", "Biography, Comedy, Drama", "Cr…
-## $ Rating         &lt;dbl&gt; 8.7, 8.5, 8.5, 8.5, 8.5, 8.3, 8.3, 8.3, 8.2, 8.2, 8.2, 8.2, 8.1, 8.1, 8.1, …
-## $ MetaScore      &lt;int&gt; 99, 47, 57, NA, NA, 96, 69, 80, NA, NA, NA, 86, 99, NA, NA, 100, 95, 85, 96…
-## $ Desc           &lt;chr&gt; "Claude Lanzmann's epic documentary recounts the story of the Holocaust thr…
-## $ Director_Stars &lt;chr&gt; "Director:\nClaude Lanzmann\n                 | \n    Stars:\nSimon Srebnik…
-## $ Votes          &lt;chr&gt; "9,984", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""…
-## $ Gross          &lt;chr&gt; "$0.02M", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "…
+## $ X              &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 4…
+## $ Name           &lt;chr&gt; "Shoah", "Home", "Untouchable", "Le Trou", "The Man Who Planted Trees", "Children of Paradise", "Amélie", "Incendies", "La Jetée", "A Man Escaped", "A Trip to the M…
+## $ Rank           &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 4…
+## $ Year           &lt;chr&gt; "-1985", "(I) (2009)", "-2011", "-1960", "-1987", "-1945", "-2001", "-2010", "-1962", "-1956", "-1902", "-1969", "-1969", "-1995", "-1959", "-1994", "-2019", "-1953…
+## $ Type           &lt;chr&gt; "PG", "U", "15", "A", "", "A", "15", "15", "A", "U", "U", "A", "AA", "15", "A", "15", "15", "A", "X", "15", "A", "A", "U", "12", "12", "12A", "X", "X", "PG", "X", "…
+## $ Duration       &lt;chr&gt; "566 min", "118 min", "112 min", "131 min", "30 min", "189 min", "122 min", "131 min", "28 min", "101 min", "13 min", "127 min", "145 min", "98 min", "99 min", "99 …
+*## $ Genre          &lt;chr&gt; "Documentary, History, War", "Documentary", "Biography, Comedy, Drama", "Crime, Drama, Thriller", "Animation, Short, Drama", "Drama, Romance", "Comedy, Romance", "D…
+## $ Rating         &lt;dbl&gt; 8.7, 8.5, 8.5, 8.5, 8.5, 8.3, 8.3, 8.3, 8.2, 8.2, 8.2, 8.2, 8.1, 8.1, 8.1, 8.1, 8.1, 8.2, 8.1, 8.0, 8.2, 8.0, 8.1, 8.1, 8.0, 8.0, 8.1, 8.0, 8.0, 7.8, 7.9, 8.1, 7.9,…
+## $ MetaScore      &lt;int&gt; 99, 47, 57, NA, NA, 96, 69, 80, NA, NA, NA, 86, 99, NA, NA, 100, 95, 85, 96, 74, 98, NA, NA, 97, 92, 90, NA, NA, 88, NA, 99, NA, 92, 94, NA, NA, NA, NA, NA, NA, NA,…
+## $ Desc           &lt;chr&gt; "Claude Lanzmann's epic documentary recounts the story of the Holocaust through interviews with witnesses - perpetrators as well as survivors.", "With aerial footag…
+## $ Director_Stars &lt;chr&gt; "Director:\nClaude Lanzmann\n                 | \n    Stars:\nSimon Srebnik, \nMichael Podchlebnik, \nMotke Zaïdl, \nHanna Zaïdl", "Director:\nYann Arthus-Bertrand\…
+## $ Votes          &lt;chr&gt; "9,984", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",…
+## $ Gross          &lt;chr&gt; "$0.02M", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""…
 ```
 --
 
@@ -256,19 +256,19 @@ glimpse(imdb)
 ```
 ## Rows: 250
 ## Columns: 13
-## $ X              &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, …
-## $ Name           &lt;chr&gt; "Shoah", "Home", "Untouchable", "Le Trou", "The Man Who Planted Trees", "Ch…
-## $ Rank           &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, …
-## $ Year           &lt;chr&gt; "-1985", "(I) (2009)", "-2011", "-1960", "-1987", "-1945", "-2001", "-2010"…
-## $ Type           &lt;chr&gt; "PG", "U", "15", "A", "", "A", "15", "15", "A", "U", "U", "A", "AA", "15", …
-## $ Duration       &lt;chr&gt; "566 min", "118 min", "112 min", "131 min", "30 min", "189 min", "122 min",…
-## $ Genre          &lt;chr&gt; "Documentary, History, War", "Documentary", "Biography, Comedy, Drama", "Cr…
-## $ Rating         &lt;dbl&gt; 8.7, 8.5, 8.5, 8.5, 8.5, 8.3, 8.3, 8.3, 8.2, 8.2, 8.2, 8.2, 8.1, 8.1, 8.1, …
-## $ MetaScore      &lt;int&gt; 99, 47, 57, NA, NA, 96, 69, 80, NA, NA, NA, 86, 99, NA, NA, 100, 95, 85, 96…
-## $ Desc           &lt;chr&gt; "Claude Lanzmann's epic documentary recounts the story of the Holocaust thr…
-*## $ Director_Stars &lt;chr&gt; "Director:\nClaude Lanzmann\n                 | \n    Stars:\nSimon Srebnik…
-## $ Votes          &lt;chr&gt; "9,984", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""…
-## $ Gross          &lt;chr&gt; "$0.02M", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "…
+## $ X              &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 4…
+## $ Name           &lt;chr&gt; "Shoah", "Home", "Untouchable", "Le Trou", "The Man Who Planted Trees", "Children of Paradise", "Amélie", "Incendies", "La Jetée", "A Man Escaped", "A Trip to the M…
+## $ Rank           &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 4…
+## $ Year           &lt;chr&gt; "-1985", "(I) (2009)", "-2011", "-1960", "-1987", "-1945", "-2001", "-2010", "-1962", "-1956", "-1902", "-1969", "-1969", "-1995", "-1959", "-1994", "-2019", "-1953…
+## $ Type           &lt;chr&gt; "PG", "U", "15", "A", "", "A", "15", "15", "A", "U", "U", "A", "AA", "15", "A", "15", "15", "A", "X", "15", "A", "A", "U", "12", "12", "12A", "X", "X", "PG", "X", "…
+## $ Duration       &lt;chr&gt; "566 min", "118 min", "112 min", "131 min", "30 min", "189 min", "122 min", "131 min", "28 min", "101 min", "13 min", "127 min", "145 min", "98 min", "99 min", "99 …
+## $ Genre          &lt;chr&gt; "Documentary, History, War", "Documentary", "Biography, Comedy, Drama", "Crime, Drama, Thriller", "Animation, Short, Drama", "Drama, Romance", "Comedy, Romance", "D…
+## $ Rating         &lt;dbl&gt; 8.7, 8.5, 8.5, 8.5, 8.5, 8.3, 8.3, 8.3, 8.2, 8.2, 8.2, 8.2, 8.1, 8.1, 8.1, 8.1, 8.1, 8.2, 8.1, 8.0, 8.2, 8.0, 8.1, 8.1, 8.0, 8.0, 8.1, 8.0, 8.0, 7.8, 7.9, 8.1, 7.9,…
+## $ MetaScore      &lt;int&gt; 99, 47, 57, NA, NA, 96, 69, 80, NA, NA, NA, 86, 99, NA, NA, 100, 95, 85, 96, 74, 98, NA, NA, 97, 92, 90, NA, NA, 88, NA, 99, NA, 92, 94, NA, NA, NA, NA, NA, NA, NA,…
+## $ Desc           &lt;chr&gt; "Claude Lanzmann's epic documentary recounts the story of the Holocaust through interviews with witnesses - perpetrators as well as survivors.", "With aerial footag…
+*## $ Director_Stars &lt;chr&gt; "Director:\nClaude Lanzmann\n                 | \n    Stars:\nSimon Srebnik, \nMichael Podchlebnik, \nMotke Zaïdl, \nHanna Zaïdl", "Director:\nYann Arthus-Bertrand\…
+## $ Votes          &lt;chr&gt; "9,984", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",…
+## $ Gross          &lt;chr&gt; "$0.02M", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""…
 ```
 --
 
@@ -406,6 +406,8 @@ imdb %&gt;%
 str_extract(Year,"[:digit:]{4}") # Extract exactly 4 digits
 str_replace_all(Year, "[()I-]", "") # Replace the characters ()I- for nothing
 - gsub("[^0-9.]+", "", Year)  # Replace anything that is not 0-9 (one or more)
+
+str_sub(parse_number(Year), 2, 5) # Keep only numbers, and then only the last 4 strings
 ```
 
 
@@ -513,7 +515,7 @@ class: inverse
 - Use `summarise()` to compute for each album the average danceability and the the number of songs included (1 row per song)
 
 - Create a subset of the data called `maxpop`containing the variables `album`, `release_date`, `danceability` and `popularity` for the 10 most popular songs. Use function `arrange()` and `row_number()`
-<div class="countdown" id="timer_6158b53b" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_f6be92e7" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -527,11 +529,14 @@ class: inverse
 
 --
 
+
+
 ```r
-ts &lt;- read.csv("../data/02_taylor-swift-spotify.csv")
+ts &lt;- read.csv(here("data", "02_taylor-swift-spotify.csv"))
 
 glimpse(ts)
 ```
+
 
 ```
 ## Rows: 487
@@ -687,7 +692,7 @@ We are going to use data from the [World Inequality Database](https://wid.world/
 
 
 ```r
-wid &lt;- read.csv("../data/02_wid.csv")
+wid &lt;- read.csv(here("data", "02_wid.csv"))
 glimpse(wid)
 ```
 
@@ -732,147 +737,147 @@ library(ggplot2)
 ggplot()
 ```
 
-![](02_data-visualization_files/figure-html/unnamed-chunk-38-1.png)&lt;!-- --&gt;
-]
-
----
-
-
----
-# ggplot() BASICS
-.pull-left[
-Based on *The Grammar of graphics* (Wilkinson, 2005). &lt;br&gt; What is a statistical graphic? A mapping from data to aesthetic attributes (color, shape, size) of geometric objects (points, lines, bars). 
-
-  `ggplot()` creates a canvas to draw on. Then we add: 
-
-&lt;span class="emphasized"&gt;🔢 🔡 Data:&lt;/span&gt; specifies the dataframe with the **values** to plot
- 
-
-
-
-]
-.pull-right[
-
-```r
-#install.packages("ggplot2")
-library(ggplot2)
-```
-
-
-```r
-ggplot(data = wid,          # Data
-```
-
-![](02_data-visualization_files/figure-html/unnamed-chunk-41-1.png)&lt;!-- --&gt;
-
-]
-
----
-# ggplot() BASICS
-.pull-left[
-Based on *The Grammar of graphics* (Wilkinson, 2005). &lt;br&gt; What is a statistical graphic? A mapping from data to aesthetic attributes (color, shape, size) of geometric objects (points, lines, bars). 
-
-  `ggplot()` creates a canvas to draw on. Then we add: 
-
-&lt;span class="emphasized"&gt;🔢 🔡 Data:&lt;/span&gt; specifies the dataframe with the **values** to plot
- 
-
-&lt;span class="emphasized"&gt;📐 🖌️Aesthetic mappings:&lt;/span &gt; relate variables in the data to visual characteristics of the plot. 
-
-
-]
-.pull-right[
-
-```r
-#install.packages("ggplot2")
-library(ggplot2)
-```
-
-
-```r
-ggplot(data = wid,          # Data
-       aes(x = inc_head,    # Aesthetics
-           y = top1)) +
-```
-
-![](02_data-visualization_files/figure-html/unnamed-chunk-44-1.png)&lt;!-- --&gt;
-
-]
-
----
-
-# ggplot() BASICS
-.pull-left[
-Based on *The Grammar of graphics* (Wilkinson, 2005). &lt;br&gt; What is a statistical graphic? A mapping from data to aesthetic attributes (color, shape, size) of geometric objects (points, lines, bars). 
-
-  `ggplot()` creates a canvas to draw on. Then we add: 
-
-&lt;span class="emphasized"&gt;🔢 🔡 Data:&lt;/span&gt; specifies the dataframe with the **values** to plot
- 
-
-&lt;span class="emphasized"&gt;📐 🖌️Aesthetic mappings:&lt;/span &gt; relate variables in the data to visual characteristics of the plot. 
-
-
-&lt;span class="emphasized"&gt;📈 📊 Geometries:&lt;/span&gt; describe how to render each observation. Can be layered to have multiple representations of the data.  
- 
-
-
-]
-.pull-right[
-
-```r
-#install.packages("ggplot2")
-library(ggplot2)
-```
-
-
-```r
-ggplot(data = wid,          # Data
-       aes(x = inc_head,    # Aesthetics
-           y = top1)) +
-  geom_point()              # Geometry
-```
-
-![](02_data-visualization_files/figure-html/unnamed-chunk-46-1.png)&lt;!-- --&gt;
-
-]
-
----
-
-
-# ggplot() BASICS
-.pull-left[
-Based on *The Grammar of graphics* (Wilkinson, 2005). &lt;br&gt; What is a statistical graphic? A mapping from data to aesthetic attributes (color, shape, size) of geometric objects (points, lines, bars). 
-
-  `ggplot()` creates a canvas to draw on. Then we add: 
-
-&lt;span class="emphasized"&gt;🔢 🔡 Data:&lt;/span&gt; specifies the dataframe with the **values** to plot
- 
-
-&lt;span class="emphasized"&gt;📐 🖌️Aesthetic mappings:&lt;/span &gt; relate variables in the data to visual characteristics of the plot. 
-
-
-&lt;span class="emphasized"&gt;📈 📊 Geometries:&lt;/span&gt; describe how to render each observation. Can be layered to have multiple representations of the data.  
- 
-
-
-]
-.pull-right[
-
-```r
-#install.packages("ggplot2")
-library(ggplot2)
-```
-
-
-```r
-ggplot(data = wid,          # Data
-       aes(x = inc_head,    # Aesthetics
-           y = top1)) +
-  geom_point()              # Geometry
-```
-
 ![](02_data-visualization_files/figure-html/unnamed-chunk-48-1.png)&lt;!-- --&gt;
+]
+
+---
+
+
+---
+# ggplot() BASICS
+.pull-left[
+Based on *The Grammar of graphics* (Wilkinson, 2005). &lt;br&gt; What is a statistical graphic? A mapping from data to aesthetic attributes (color, shape, size) of geometric objects (points, lines, bars). 
+
+  `ggplot()` creates a canvas to draw on. Then we add: 
+
+&lt;span class="emphasized"&gt;🔢 🔡 Data:&lt;/span&gt; specifies the dataframe with the **values** to plot
+ 
+
+
+
+]
+.pull-right[
+
+```r
+#install.packages("ggplot2")
+library(ggplot2)
+```
+
+
+```r
+ggplot(data = wid,          # Data
+```
+
+![](02_data-visualization_files/figure-html/unnamed-chunk-51-1.png)&lt;!-- --&gt;
+
+]
+
+---
+# ggplot() BASICS
+.pull-left[
+Based on *The Grammar of graphics* (Wilkinson, 2005). &lt;br&gt; What is a statistical graphic? A mapping from data to aesthetic attributes (color, shape, size) of geometric objects (points, lines, bars). 
+
+  `ggplot()` creates a canvas to draw on. Then we add: 
+
+&lt;span class="emphasized"&gt;🔢 🔡 Data:&lt;/span&gt; specifies the dataframe with the **values** to plot
+ 
+
+&lt;span class="emphasized"&gt;📐 🖌️Aesthetic mappings:&lt;/span &gt; relate variables in the data to visual characteristics of the plot. 
+
+
+]
+.pull-right[
+
+```r
+#install.packages("ggplot2")
+library(ggplot2)
+```
+
+
+```r
+ggplot(data = wid,          # Data
+       aes(x = inc_head,    # Aesthetics
+           y = top1)) +
+```
+
+![](02_data-visualization_files/figure-html/unnamed-chunk-54-1.png)&lt;!-- --&gt;
+
+]
+
+---
+
+# ggplot() BASICS
+.pull-left[
+Based on *The Grammar of graphics* (Wilkinson, 2005). &lt;br&gt; What is a statistical graphic? A mapping from data to aesthetic attributes (color, shape, size) of geometric objects (points, lines, bars). 
+
+  `ggplot()` creates a canvas to draw on. Then we add: 
+
+&lt;span class="emphasized"&gt;🔢 🔡 Data:&lt;/span&gt; specifies the dataframe with the **values** to plot
+ 
+
+&lt;span class="emphasized"&gt;📐 🖌️Aesthetic mappings:&lt;/span &gt; relate variables in the data to visual characteristics of the plot. 
+
+
+&lt;span class="emphasized"&gt;📈 📊 Geometries:&lt;/span&gt; describe how to render each observation. Can be layered to have multiple representations of the data.  
+ 
+
+
+]
+.pull-right[
+
+```r
+#install.packages("ggplot2")
+library(ggplot2)
+```
+
+
+```r
+ggplot(data = wid,          # Data
+       aes(x = inc_head,    # Aesthetics
+           y = top1)) +
+  geom_point()              # Geometry
+```
+
+![](02_data-visualization_files/figure-html/unnamed-chunk-56-1.png)&lt;!-- --&gt;
+
+]
+
+---
+
+
+# ggplot() BASICS
+.pull-left[
+Based on *The Grammar of graphics* (Wilkinson, 2005). &lt;br&gt; What is a statistical graphic? A mapping from data to aesthetic attributes (color, shape, size) of geometric objects (points, lines, bars). 
+
+  `ggplot()` creates a canvas to draw on. Then we add: 
+
+&lt;span class="emphasized"&gt;🔢 🔡 Data:&lt;/span&gt; specifies the dataframe with the **values** to plot
+ 
+
+&lt;span class="emphasized"&gt;📐 🖌️Aesthetic mappings:&lt;/span &gt; relate variables in the data to visual characteristics of the plot. 
+
+
+&lt;span class="emphasized"&gt;📈 📊 Geometries:&lt;/span&gt; describe how to render each observation. Can be layered to have multiple representations of the data.  
+ 
+
+
+]
+.pull-right[
+
+```r
+#install.packages("ggplot2")
+library(ggplot2)
+```
+
+
+```r
+ggplot(data = wid,          # Data
+       aes(x = inc_head,    # Aesthetics
+           y = top1)) +
+  geom_point()              # Geometry
+```
+
+![](02_data-visualization_files/figure-html/unnamed-chunk-58-1.png)&lt;!-- --&gt;
 
 ]
 
@@ -913,7 +918,7 @@ wid %&gt;%
 ```
 --
 
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-52-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-62-1.png" style="display: block; margin: auto;" /&gt;
 ---
 ### Can you guess the plots?
 
@@ -925,7 +930,7 @@ wid %&gt;%
 ```
 --
 
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-54-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-64-1.png" style="display: block; margin: auto;" /&gt;
 ---
 ### Can you guess the plots?
 
@@ -938,7 +943,7 @@ wid %&gt;%
 ```
 --
 
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-56-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-66-1.png" style="display: block; margin: auto;" /&gt;
 ---
 ### Can you guess the plots?
 
@@ -956,7 +961,7 @@ wid %&gt;%
 ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
 
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-58-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-68-1.png" style="display: block; margin: auto;" /&gt;
 ---
 # AESTHETICS:
 .greenhead[**AXES**]
@@ -973,7 +978,7 @@ wid %&gt;%
 * xlim(0.2, 0.3)
 ```
 
-![](02_data-visualization_files/figure-html/unnamed-chunk-60-1.png)&lt;!-- --&gt;
+![](02_data-visualization_files/figure-html/unnamed-chunk-70-1.png)&lt;!-- --&gt;
 ]
 .pull-right[
 
@@ -986,7 +991,7 @@ wid %&gt;%
 * ylim(NA, 50000)
 ```
 
-![](02_data-visualization_files/figure-html/unnamed-chunk-62-1.png)&lt;!-- --&gt;
+![](02_data-visualization_files/figure-html/unnamed-chunk-72-1.png)&lt;!-- --&gt;
 ]
 
 ---
@@ -1003,7 +1008,7 @@ wid %&gt;%
 
 --
 
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-64-1.png" width="25%" /&gt;&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-64-2.png" width="25%" /&gt;&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-64-3.png" width="25%" /&gt;&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-64-4.png" width="25%" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-74-1.png" width="25%" /&gt;&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-74-2.png" width="25%" /&gt;&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-74-3.png" width="25%" /&gt;&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-74-4.png" width="25%" /&gt;
 --
 
 - You can customize the graph completely using the theme() function
@@ -1026,7 +1031,7 @@ norm &lt;-
 norm + geom_point()
 ```
 
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-66-1.png" width="28%" style="display: block; margin: auto;" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-76-1.png" width="28%" style="display: block; margin: auto;" /&gt;
 ---
 ### How to deal with overplotting? 
 
@@ -1041,7 +1046,7 @@ norm + geom_point(size = 2)
 norm + geom_point(size = 1)
 ```
 
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-67-1.png" width="33%" /&gt;&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-67-2.png" width="33%" /&gt;&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-67-3.png" width="33%" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-77-1.png" width="33%" /&gt;&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-77-2.png" width="33%" /&gt;&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-77-3.png" width="33%" /&gt;
 ---
 
 ### How to deal with overplotting? 
@@ -1057,7 +1062,7 @@ norm + geom_point(size = 3,
 *                 shape = "X")
 ```
 
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-68-1.png" width="33%" /&gt;&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-68-2.png" width="33%" /&gt;&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-68-3.png" width="33%" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-78-1.png" width="33%" /&gt;&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-78-2.png" width="33%" /&gt;&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-78-3.png" width="33%" /&gt;
 See `vignette("ggplot2-specs")`for the values you can use for these and other aesthetics
 
 ---
@@ -1077,7 +1082,7 @@ norm + geom_point(size = 3,
 *                 alpha = 0.1)
 ```
 
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-69-1.png" width="33%" /&gt;&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-69-2.png" width="33%" /&gt;&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-69-3.png" width="33%" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-79-1.png" width="33%" /&gt;&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-79-2.png" width="33%" /&gt;&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-79-3.png" width="33%" /&gt;
 
 
 
@@ -1097,7 +1102,7 @@ wid %&gt;%
   geom_point()
 ```
 
-![](02_data-visualization_files/figure-html/unnamed-chunk-71-1.png)&lt;!-- --&gt;
+![](02_data-visualization_files/figure-html/unnamed-chunk-81-1.png)&lt;!-- --&gt;
 ]
 .pull-right[
 ]
@@ -1117,7 +1122,7 @@ wid %&gt;%
   geom_point()
 ```
 
-![](02_data-visualization_files/figure-html/unnamed-chunk-73-1.png)&lt;!-- --&gt;
+![](02_data-visualization_files/figure-html/unnamed-chunk-83-1.png)&lt;!-- --&gt;
 ]
 .pull-right[
 - ggplot2 takes care of the details converting data ("Europe", "Africa") to aesthetics (Green, Red) with an automatic **scale** 
@@ -1139,7 +1144,7 @@ wid %&gt;%
 *            color = fshare)) +
   geom_point(alpha = 0.3)
 ```
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-75-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-85-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 ##Setting vs. mapping visual attributes
@@ -1151,7 +1156,7 @@ wid %&gt;%
   ggplot(aes(inc_head, top1)) +
   geom_point(color = "darkblue")
 ```
-![](02_data-visualization_files/figure-html/unnamed-chunk-77-1.png)&lt;!-- --&gt;
+![](02_data-visualization_files/figure-html/unnamed-chunk-87-1.png)&lt;!-- --&gt;
 ]
 .pull-right[
 .nunito[**Mapping:**] Relating an aesthetic to a **variable**  
@@ -1171,7 +1176,7 @@ wid %&gt;%
   ggplot(aes(inc_head, top1)) +
 * geom_point(aes(color = continent))
 ```
-![](02_data-visualization_files/figure-html/unnamed-chunk-80-1.png)&lt;!-- --&gt;
+![](02_data-visualization_files/figure-html/unnamed-chunk-90-1.png)&lt;!-- --&gt;
 ]
 ---
 ### What about this? 
@@ -1185,7 +1190,7 @@ wid %&gt;%
 * geom_point(aes(color = "darkblue"))
 ```
 
-![](02_data-visualization_files/figure-html/unnamed-chunk-82-1.png)&lt;!-- --&gt;
+![](02_data-visualization_files/figure-html/unnamed-chunk-92-1.png)&lt;!-- --&gt;
 
 ]
 
@@ -1205,7 +1210,7 @@ wid %&gt;%
 * geom_point(aes(color = "darkblue"))
 ```
 
-![](02_data-visualization_files/figure-html/unnamed-chunk-84-1.png)&lt;!-- --&gt;
+![](02_data-visualization_files/figure-html/unnamed-chunk-94-1.png)&lt;!-- --&gt;
 
 ]
 
@@ -1247,7 +1252,7 @@ wid %&gt;%
 ]
 .pull-right[
 
-![](02_data-visualization_files/figure-html/unnamed-chunk-87-1.png)&lt;!-- --&gt;
+![](02_data-visualization_files/figure-html/unnamed-chunk-97-1.png)&lt;!-- --&gt;
 ]
 
 
@@ -1274,7 +1279,7 @@ wid %&gt;%
 ]
 .pull-right[
 
-![](02_data-visualization_files/figure-html/unnamed-chunk-89-1.png)&lt;!-- --&gt;
+![](02_data-visualization_files/figure-html/unnamed-chunk-99-1.png)&lt;!-- --&gt;
 ]
 
 
@@ -1290,7 +1295,7 @@ wid %&gt;%
 *            ncol = 6,
 *            scales = "free_x")
 ```
-![](02_data-visualization_files/figure-html/unnamed-chunk-91-1.png)&lt;!-- --&gt;
+![](02_data-visualization_files/figure-html/unnamed-chunk-101-1.png)&lt;!-- --&gt;
 ---
 &lt;br&gt;
 &lt;br&gt;
@@ -1299,9 +1304,9 @@ wid %&gt;%
 
 
 ```r
-ggsave("../myplot.png")   # Saves what is in the Plots tab
+ggsave(here("outputs", "myplot.png")   # Saves what is in the Plots tab
 
-ggsave("../myplot.png",    # Where 
+ggsave(here("outputs", "myplot.png"),    # Where 
        plot = last_plot(), # What 
        width = 16,         # Dimensions
        height = 9,
@@ -1373,7 +1378,7 @@ balance %&gt;%
   theme_minimal(base_size = 20) 
 ```
 
-![](02_data-visualization_files/figure-html/unnamed-chunk-95-1.png)&lt;!-- --&gt;
+![](02_data-visualization_files/figure-html/unnamed-chunk-105-1.png)&lt;!-- --&gt;
 ]
 
 
@@ -1388,7 +1393,7 @@ balance %&gt;%
   theme_minimal(base_size = 20) 
 ```
 
-![](02_data-visualization_files/figure-html/unnamed-chunk-96-1.png)&lt;!-- --&gt;
+![](02_data-visualization_files/figure-html/unnamed-chunk-106-1.png)&lt;!-- --&gt;
 ---
 
 
@@ -1402,7 +1407,7 @@ balance %&gt;%
   theme_minimal(base_size = 20) 
 ```
 
-![](02_data-visualization_files/figure-html/unnamed-chunk-97-1.png)&lt;!-- --&gt;
+![](02_data-visualization_files/figure-html/unnamed-chunk-107-1.png)&lt;!-- --&gt;
 ---
 
 .nunito[What happens if we don't specify new mappings for each geom?]
@@ -1415,7 +1420,7 @@ balance %&gt;%
   theme_minimal(base_size = 20) 
 ```
 
-![](02_data-visualization_files/figure-html/unnamed-chunk-98-1.png)&lt;!-- --&gt;
+![](02_data-visualization_files/figure-html/unnamed-chunk-108-1.png)&lt;!-- --&gt;
 ---
 ### LABELING EACH LAYER
 
@@ -1431,7 +1436,7 @@ balance %&gt;%
                      name = NULL)
 ```
 
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-99-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-109-1.png" style="display: block; margin: auto;" /&gt;
 ---
 
 
@@ -1466,7 +1471,7 @@ wid %&gt;%
 ```
 
 
-![](02_data-visualization_files/figure-html/unnamed-chunk-102-1.png)&lt;!-- --&gt;
+![](02_data-visualization_files/figure-html/unnamed-chunk-112-1.png)&lt;!-- --&gt;
 ---
 
 
@@ -1487,7 +1492,7 @@ balance_plot +
                 label = exports), 
 *           data = bal_labels)
 ```
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-105-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-115-1.png" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -1510,7 +1515,7 @@ balance_plot +
 *           nudge_y = 4,
 *           nudge_x = -2)
 ```
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-108-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-118-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 ### ANNOTATIONS
@@ -1536,7 +1541,7 @@ balance_plot +
 ```
 &lt;br&gt;
 &lt;br&gt;
-![](02_data-visualization_files/figure-html/unnamed-chunk-110-1.png)&lt;!-- --&gt;
+![](02_data-visualization_files/figure-html/unnamed-chunk-120-1.png)&lt;!-- --&gt;
 ]
 .pull.right[
 
@@ -1549,7 +1554,7 @@ balance_plot +
            label = "Acts of Union between \n England and Scotland")
 ```
 
-![](02_data-visualization_files/figure-html/unnamed-chunk-112-1.png)&lt;!-- --&gt;
+![](02_data-visualization_files/figure-html/unnamed-chunk-122-1.png)&lt;!-- --&gt;
 ] 
 ---
 class: inverse
@@ -1557,8 +1562,8 @@ class: inverse
 
 - Reproduce this graph with the Taylor Swift data.  Hint: add `scale_shape_manual(values = c(1, 16))` at the end. 
 &lt;br&gt; 
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-113-1.png" width="1080" /&gt;
-<div class="countdown" id="timer_b53467aa" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-123-1.png" width="1080" /&gt;
+<div class="countdown" id="timer_2e19d646" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1583,7 +1588,7 @@ ts %&gt;%
                                                                                   #
 ```
 
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-115-1.png" width="1080" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-125-1.png" width="1080" /&gt;
 
 ---
 
@@ -1602,7 +1607,7 @@ ts %&gt;%
                                                                                   #
 ```
 
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-117-1.png" width="1080" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-127-1.png" width="1080" /&gt;
 ---
 
 
@@ -1624,7 +1629,7 @@ ts %&gt;%
                                                                                   #
 ```
 
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-119-1.png" width="1080" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-129-1.png" width="1080" /&gt;
 ---
 
 ```r
@@ -1642,7 +1647,7 @@ ts %&gt;%
                                                                                   #
 ```
 
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-121-1.png" width="1080" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-131-1.png" width="1080" /&gt;
 ---
 
 ```r
@@ -1660,7 +1665,7 @@ ts %&gt;%
                                                                                   #
 ```
 
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-123-1.png" width="1080" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-133-1.png" width="1080" /&gt;
 ---
 
 ```r
@@ -1678,7 +1683,7 @@ ts %&gt;%
                                                                                   #
 ```
 
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-125-1.png" width="1080" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-135-1.png" width="1080" /&gt;
 
 
 ---
@@ -1688,7 +1693,7 @@ So far, we've only seen **individual geoms**, where there is a graphical object 
 A **collective geom** displays multiple observations with one geometric object. They are often used to display grouped summary statistics (e.g. the average popularity by album) or variable distributions through boxplots or histograms/densities. 
 
 .pull-left[
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-126-1.png" width="576" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-136-1.png" width="576" /&gt;
 ]
 .pull-right[
 
@@ -1717,7 +1722,7 @@ So far, we've only seen **individual geoms**, where there is a graphical object 
 A **collective geom** displays multiple observations with one geometric object. They are often used to display grouped summary statistics (e.g. the average popularity by album) or variable distributions through boxplots or histograms/densities. 
 
 .pull-left[
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-128-1.png" width="576" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-138-1.png" width="576" /&gt;
 
 ]
 .pull-right[
@@ -1804,7 +1809,7 @@ Being careless with scales and axes is dangerous
 
 - Your graph should be attractive and **✨aesthetically pleasing✨**. Declutter!  
 
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-134-1.png" width="1440" style="display: block; margin: auto;" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-144-1.png" width="1440" style="display: block; margin: auto;" /&gt;
 ---
 .greenhead[4 qualities of great visualizations]
 
@@ -1812,7 +1817,7 @@ Being careless with scales and axes is dangerous
 
 - Your graph should be attractive and **✨aesthetically pleasing✨**. Declutter!  
 
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-135-1.png" width="1440" style="display: block; margin: auto;" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-145-1.png" width="1440" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -1822,18 +1827,34 @@ Being careless with scales and axes is dangerous
 - A graphic should reveal evidence that we would have a hard time seeing otherwise. The purpose of visualization is insight, not pictures.
 - From the creators of "*meetings that could have been an e-mail*", we have: "*graphs that could have been a simple table or sentence*" 
 
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-136-1.png" width="576" style="display: block; margin: auto;" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-146-1.png" width="576" style="display: block; margin: auto;" /&gt;
 
 ---
 
 ###HOMEWORK
 Submit using [this](https://classroom.github.com/a/VrRecub6) link
 - Use the `02_playfair-wages-wheat,csv` dataset and  and replicate this graph as best as you can using `ggplot()`
-&lt;img src="inputs/playfair-wages-wheat.jpeg" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;img src="inputs/playfair-wages-wheat.png" width="50%" style="display: block; margin: auto;" /&gt;
   - 🆗 OK: Plotting wheat prices, wages and the timeline of English rulers in the right geoms and colors
   - 👍🏽 Great: Getting the axes (you might need `dup_axis()`) and the overall appearance of the geoms as similar as you can, as well as including the annotation in the middle of the graph ("Chart showing...")
   - 🤩 Amazing: Adding the label over the wages series ("Weekly wages of a good mechanic"), customizing the appearance of the grid and including the labels of the English rulers 
   
+
+---
+
+###HOMEWORK
+Submit using [this](https://classroom.github.com/a/VrRecub6) link
+- Use the `02_playfair-wages-wheat,csv` dataset and  and replicate this graph as best as you can using `ggplot()`
+&lt;img src="inputs/playfair-wages-wheat.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+
+After completing this or after at least **30 minutes of trying on your own** — you may use an AI tool (e.g., ChatGPT) to get help. Add a short reflection at the bottom of your script:
+
+1. What prompt did you give to the AI? (Paste it)
+2. What kind of answer did it give you? Was it helpful? Why or why not?
+3. How did you adapt or modify what the AI gave you, if at all?
+
+Include your R script (with AI reflection) and final image 
 ---
 
 
@@ -1877,7 +1898,7 @@ wid %&gt;%
 
                                                       #
 ```
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-141-1.png" width="60%" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-152-1.png" width="60%" /&gt;
 ---
 ## Axes
 
@@ -1890,7 +1911,7 @@ wid %&gt;%
   scale_y_continuous(name = "Share of income among top 1%")
 ```
 
-&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-142-1.png" width="60%" /&gt;
+&lt;img src="02_data-visualization_files/figure-html/unnamed-chunk-153-1.png" width="60%" /&gt;
 
 
     </textarea>
