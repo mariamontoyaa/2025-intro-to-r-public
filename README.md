@@ -18,14 +18,75 @@ This course is mostly based on [Louis Sirugue Intro to Programming in R course](
 ## Lectures:
 You can find the pdf version of the slides in the `slides` folder. 
 1. Data manipulation (Sep 8)
-    -   [Slides](https://github.com/mariamontoyaa/2023-intro-to-R-public/blob/main/slides/01_data-manipulation-full.html) 
+    - [Slides](https://github.com/mariamontoyaa/2023-intro-to-R-public/blob/main/slides/01_data-manipulation-full.html) 
 3. Data visualization (Sep 9)
     - [Slides](https://github.com/mariamontoyaa/2023-intro-to-R-public/blob/2ecbd8064296e5b9d9551bccd7fc2b3cacce768d/slides/02_data-visualization.html)
-    - Homework 1 due [last slide of lecture 1](https://github.com/mariamontoyaa/2023-intro-to-R-public/blob/d22d568bf491066d70795a6b56f135c56f0da546/slides/01_data-manipulation-noanswers.html). Submit using this [link](https://classroom.github.com/a/kGB7qVRf) and following the instructions [here](https://www.youtube.com/watch?v=O0XcZ-c_oF8). 
 4. R Markdown, LaTeX and other tools for reproducible research (Sep 11)
     - [Slides](https://github.com/mariamontoyaa/2023-intro-to-R-public/blob/2ecbd8064296e5b9d9551bccd7fc2b3cacce768d/slides/03_reports-Rmd-Latex.html)
-    - Homework 2 due. Instructions and submission link [here](https://classroom.github.com/a/VrRecub6). [**Homework answers**](https://github.com/mariamontoyaa/2023-intro-to-R-public/blob/2ecbd8064296e5b9d9551bccd7fc2b3cacce768d/code/hw02_playfair-wheat-wages.R)
-5. Econometrics in R (Sep 12) 
+public/blob/2ecbd8064296e5b9d9551bccd7fc2b3cacce768d/code/hw02_playfair-wheat-wages.R)
+5. Econometrics in R (Sep 12)
+   
+## 📝 Homework 1: Data Manipulation  
+**Due:** September 9 at 11:15 AM
+
+### ✅ Task 1: Inspect the IMDB dataset
+
+Use `glimpse()` and `table()` to explore the dataset. Identify **5 issues** that should be addressed in the data cleaning or tidying process that we **haven’t covered in class**.
+
+For each issue:
+- Briefly describe the problem
+- Suggest at least **one function** that could help fix it  
+- You’re encouraged to Google or use R help tools!
+
+**Example**:  
+The `year` variable is not numeric and contains string characters.  
+Suggested functions: `str_length()`, `str_sub()`, `as.numeric()`
+
+ 
+### ✅ Task 2: Are older movies better?
+
+Use what you’ve learned to explore whether older movies tend to have higher ratings.
+
+1. **Fix the year variable** — clean it to extract the numeric year  
+2. **Create a new variable** that indicates whether a movie is older or more recent than the average year in the dataset  
+3. **Group by decade** (starting from the 1950s) and calculate the average rating for each decade
+
+ 
+### ✅ Task 3: AI Reflection
+
+After completing the coding portion — or after at least **30 minutes of trying on your own** — you may use an AI tool (e.g., ChatGPT) to get help.
+
+Add a short reflection at the bottom of your script:
+
+1. What prompt did you give to the AI? (Paste it)
+2. What kind of answer did it give you? Was it helpful? Why or why not? Did it contain any errors?
+3. How did you adapt or modify what the AI gave you, if at all?
+
+ 
+**📎 Submit** via [GitHub Classroom][https://classroom.github.com/a/kGB7qVRf](https://classroom.github.com/a/1l9hp2lL).  
+Follow the instructions in [this short tutorial](https://www.youtube.com/watch?v=O0XcZ-c_oF8).
+
+---
+## 📝 Homework 2: Data Visualization
+**Due:** September 11 at 11:15 AM
+
+Use the `02_playfair-wages-wheat.sv` dataset and replicate [this graph](slides/playfair-wages-wheat.png) as best as you can using `ggplot()`
+
+  - 🆗 OK: Plotting wheat prices, wages and the timeline of English rulers in the right geoms and colors
+  - 👍🏽 Great: Getting the axes (you might need `dup_axis()`) and the overall appearance of the geoms as similar as you can, as well as including the annotation in the middle of the graph ("Chart showing...")
+  - 🤩 Amazing: Adding the label over the wages series ("Weekly wages of a good mechanic"), customizing the appearance of the grid and including the labels of the English rulers 
+
+Add a short reflection at the bottom of your script:
+
+1. What prompt did you give to the AI? (Paste it)
+2. What kind of answer did it give you? Was it helpful? Why or why not? Did it contain any errors?
+3. How did you adapt or modify what the AI gave you, if at all?
+
+ 
+**📎 Submit** via [GitHub Classroom][https://classroom.github.com/a/kGB7qVRf]([https://classroom.github.com/a/1l9hp2lL](https://classroom.github.com/a/HlvFmxvH).  
+Follow the instructions in [this short tutorial](https://www.youtube.com/watch?v=O0XcZ-c_oF8).
+---
+
 
 ## Do you have a question, you can't access the material or your code doesn't run?
 Create a new issue and write down your question **publicly**: 
