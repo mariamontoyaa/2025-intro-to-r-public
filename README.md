@@ -62,8 +62,7 @@ Add a short reflection at the bottom of your script:
 2. What kind of answer did it give you? Was it helpful? Why or why not? Did it contain any errors?
 3. How did you adapt or modify what the AI gave you, if at all?
 
- 
-**📎 Submit** via [GitHub Classroom][https://classroom.github.com/a/kGB7qVRf](https://classroom.github.com/a/1l9hp2lL).  
+**📎Submit** via [GitHub Classroom](https://classroom.github.com/a/1l9hp2lL)
 Follow the instructions in [this short tutorial](https://www.youtube.com/watch?v=O0XcZ-c_oF8).
 
 ---
@@ -82,9 +81,9 @@ Add a short reflection at the bottom of your script:
 2. What kind of answer did it give you? Was it helpful? Why or why not? Did it contain any errors?
 3. How did you adapt or modify what the AI gave you, if at all?
 
- 
-**📎 Submit** via [GitHub Classroom](https://classroom.github.com/a/1l9hp2lL](https://classroom.github.com/a/HlvFmxvH).  
+**📎Submit** via [GitHub Classroom](https://classroom.github.com/a/HlvFmxvH)
 Follow the instructions in [this short tutorial](https://www.youtube.com/watch?v=O0XcZ-c_oF8).
+
 ---
 
 
