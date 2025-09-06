@@ -18,12 +18,10 @@ This course is mostly based on [Louis Sirugue Intro to Programming in R course](
 ## Lectures:
 You can find the pdf version of the slides in the `slides` folder. 
 1. Data manipulation (Sep 8)
-    - [Slides](https://github.com/mariamontoyaa/2023-intro-to-R-public/blob/main/slides/01_data-manipulation-full.html) 
+    - [📄 Open slides](https://raw.githubusercontent.com/mariamontoyaa/2025-intro-to-r-public/main/slides/01_data-manipulation-noanswers.html)
 3. Data visualization (Sep 9)
-    - [Slides](https://github.com/mariamontoyaa/2023-intro-to-R-public/blob/2ecbd8064296e5b9d9551bccd7fc2b3cacce768d/slides/02_data-visualization.html)
+    - [📄 Open Slides](https://raw.githubusercontent.com/mariamontoyaa/2025-intro-to-r-public/main/slides/02_data-visualization.html)
 4. R Markdown, LaTeX and other tools for reproducible research (Sep 11)
-    - [Slides](https://github.com/mariamontoyaa/2023-intro-to-R-public/blob/2ecbd8064296e5b9d9551bccd7fc2b3cacce768d/slides/03_reports-Rmd-Latex.html)
-public/blob/2ecbd8064296e5b9d9551bccd7fc2b3cacce768d/code/hw02_playfair-wheat-wages.R)
 5. Econometrics in R (Sep 12)
    
 ## 📝 Homework 1: Data Manipulation  
