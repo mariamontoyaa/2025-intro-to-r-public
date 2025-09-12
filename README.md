@@ -24,6 +24,8 @@ You can find the pdf version of the slides in the `slides` folder.
 4. R Markdown, LaTeX and other tools for reproducible research (Sep 11)
     - [📄 Open Slides](https://mariamontoyaa.github.io/2025-intro-to-r-public/slides/03_reports-Rmd-Latex.html)
 6. Econometrics in R (Sep 12)
+    - [📄 Open Slides](https://mariamontoyaa.github.io/2025-intro-to-r-public/slides/04_econometrics.html)
+
    
 ## 📝 Homework 1: Data Manipulation  
 **Due:** September 9 at 11:15 AM
